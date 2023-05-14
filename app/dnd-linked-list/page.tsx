@@ -5,7 +5,7 @@ import { FC, useCallback, useMemo, useRef, useState } from "react";
 import { XYCoord, useDrag, useDrop } from "react-dnd";
 
 import { Card, CardTitle, CardContent, CardFooter } from "@/components/ui/Card";
-import { H1, H2 } from "@/components/ui/Typography";
+import { H1, H2, P } from "@/components/ui/Typography";
 
 import { cn } from "@/lib/utils";
 
@@ -50,6 +50,10 @@ export default function Page() {
   return (
     <>
       <H1 className="my-8">DnD Linked List</H1>
+      <P className="mb-8">
+        ↓Drag items. The right side list order is linked to the left side list
+        order.
+      </P>
       <div className="flex gap-20">
         <ul>
           {list.map((item, i) => (
@@ -65,18 +69,18 @@ export default function Page() {
         <ul className="flex flex-col gap-12">
           {list.map((item) => (
             <li key={item}>
-              <H2>{item}</H2>
+              <H2 className="border-none">{item}</H2>
               <ul className="flex overflow-x-auto w-[70rem] gap-12">
                 {chunkedJobs[item].map((job, i) => (
                   <li key={i}>
                     <Card className="w-80">
                       <CardContent className="p-0">
-                        <div className="bg-blue-6 flex justify-center items-center p-8">
+                        <div className="bg-blue-6 flex rounded-t-md justify-center items-center p-8">
                           <span className="text-6xl">{job.emoji}</span>
                         </div>
                       </CardContent>
                       <CardFooter>
-                        <CardTitle className="pt-4">{job.title}</CardTitle>
+                        <CardTitle className="pt-6">{job.title}</CardTitle>
                       </CardFooter>
                     </Card>
                   </li>
