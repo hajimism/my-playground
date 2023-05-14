@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/Toast";
 
 import { Providers } from "./provider";
 
-import "./tailwind.css";
+import "@/style/tailwind.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
