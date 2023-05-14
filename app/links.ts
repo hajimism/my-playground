@@ -36,6 +36,11 @@ export const LINKS: LinksTableItem[] = [
     ],
   },
   {
+    path: "/dnd-linked-list",
+    description: "List component that is sorted with dnd-able title list.",
+    scraps: [],
+  },
+  {
     path: "/next-image-blur",
     description:
       "Tried blurDataURL property to improve flickering of next/image when mounting.",
