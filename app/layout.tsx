@@ -9,8 +9,8 @@ import "./tailwind.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
-  title: "Windy Radix Template",
-  description: "Scaffolding shadcn/ui with Radix colors",
+  title: "Playground og hajimism",
+  description: "I am playing with Next v13.",
 };
 
 export default function RootLayout({
