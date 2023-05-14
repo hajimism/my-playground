@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@lexical/react": "^0.10.0",
     "@plaiceholder/next": "^2.5.0",
     "@radix-ui/react-dropdown-menu": "^2.0.4",
     "@radix-ui/react-hover-card": "^1.0.5",

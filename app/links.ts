@@ -14,6 +14,28 @@ export type Scrap = {
 
 export const LINKS: LinksTableItem[] = [
   {
+    path: "/lexical-editor",
+    description: "Tried Lexical Editor.",
+    scraps: [
+      {
+        url: "https://zenn.dev/ikenohi/scraps/16de7d33725032",
+        title: "Lexicalさんはじめまして！",
+      },
+      {
+        url: "https://zenn.dev/ikenohi/scraps/e2832cbcb566a2",
+        title: "Lexical 触ってみるぞ",
+      },
+      {
+        url: "https://zenn.dev/ikenohi/scraps/777603941c0fe8",
+        title: "Lexical Playgroundの中を覗く",
+      },
+      {
+        url: "https://zenn.dev/ikenohi/scraps/14afc4faec5f10",
+        title: "LexicalのCollapsibleを読む",
+      },
+    ],
+  },
+  {
     path: "/next-image-blur",
     description:
       "Tried blurDataURL property to improve flickering of next/image when mounting.",
