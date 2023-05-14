@@ -4,9 +4,9 @@ import { Editor } from "./Editor";
 
 export default function Page() {
   return (
-    <div className="mx-auto p-12 min-h-screen">
-      <H1>Lexical Editor</H1>
+    <>
+      <H1 className="my-8">Lexical Editor</H1>
       <Editor />
-    </div>
+    </>
   );
 }

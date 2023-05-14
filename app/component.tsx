@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/Button";
@@ -31,14 +31,15 @@ export const PageTable = () => {
   return (
     <Table className="caption-top">
       <TableCaption className="text-left py-8">
-        Welcome to my playgrpound! Here is the pages.
+        Welcome to my playgrpound! Here is the pages. I also welcome your
+        comments on my scraps (Hover the Scrap count) !
       </TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead>Path</TableHead>
           <TableHead>Description</TableHead>
           <TableHead>Source</TableHead>
-          <TableHead>Scrap count</TableHead>
+          <TableHead>Scraps</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -54,10 +55,10 @@ export const PageTable = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <Github className="ml-3" />
+                <ExternalLink className="ml-3 hover:text-teal-11 transition-colors" />
               </a>
             </TableCell>
-            <TableCell className="text-center">
+            <TableCell>
               <ScrapColumnItem scraps={item.scraps} />
             </TableCell>
           </TableRow>
@@ -73,18 +74,20 @@ const ScrapColumnItem = ({ scraps }: { scraps: Scrap[] }) => {
   return (
     <HoverCard>
       <HoverCardTrigger>
-        <Button variant="link"> {noScrap ? "-" : scraps.length}</Button>
+        <Button variant="link" className="ml-1">
+          {noScrap ? "-" : scraps.length}
+        </Button>
       </HoverCardTrigger>
       {noScrap ? null : (
         <HoverCardContent>
           <List>
             {scraps.map(({ url, title }) => (
-              <li key={url} className="text-left">
+              <li key={url}>
                 <a
                   href={url}
                   target="_blank"
                   rel="noopener"
-                  className="hover:text-green-10"
+                  className="hover:text-teal-11 cursor-pointer transition-colors"
                 >
                   {title}
                 </a>

@@ -29,7 +29,7 @@ const initialConfig = {
 export function Editor() {
   return (
     <LexicalComposer initialConfig={initialConfig}>
-      <div className="relative rounded-md">
+      <div className="relative rounded-md border border-sage-11">
         <RichTextPlugin />
         <HistoryPlugin />
         <AutoFocusPlugin />

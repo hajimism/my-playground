@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 
+import { Header } from "@/components/ui/Header";
 import { Toaster } from "@/components/ui/Toast";
 
 import { Providers } from "./provider";
@@ -20,9 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
-      <body className="font-inter">
+      <body className="font-inter bg-sage-1">
         <Providers>
-          <main className="bg-sage-1 min-h-screen">{children}</main>
+          <Header />
+          <main className="container mx-auto min-h-screen py-8">
+            {children}
+          </main>
           <Toaster />
         </Providers>
       </body>
