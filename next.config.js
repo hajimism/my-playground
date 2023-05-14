@@ -1,8 +1,15 @@
+const { withPlaiceholder } = require("@plaiceholder/next");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
     typedRoutes: true,
   },
+  images: {
+    domains: ["opengraph.githubassets.com"],
+  },
 };
 
-module.exports = nextConfig;
+module.exports = withPlaiceholder({
+  ...nextConfig,
+});
