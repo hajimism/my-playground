@@ -74,9 +74,13 @@ const ScrapColumnItem = ({ scraps }: { scraps: Scrap[] }) => {
   return (
     <HoverCard>
       <HoverCardTrigger>
-        <Button variant="link" className="ml-1">
-          {noScrap ? "-" : scraps.length}
-        </Button>
+        {noScrap ? (
+          <span className="ml-5">-</span>
+        ) : (
+          <Button variant="link" className="ml-1">
+            {scraps.length}
+          </Button>
+        )}
       </HoverCardTrigger>
       {noScrap ? null : (
         <HoverCardContent>
