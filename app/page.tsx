@@ -19,12 +19,14 @@ import { LINKS } from "./links";
 
 const gradient =
   "text-transparent bg-clip-text bg-gradient-to-r from-blue-10 via-cyan-10 to-green-10";
+const PATH_TO_TREE_IN_REOO =
+  "https://github.com/hajimism/my-playground/tree/main/app";
 
 export default function Home() {
   return (
     <div className="py-20 px-6 max-w-5xl mx-auto">
       <div className="flex justify-between items-center">
-        <H1 className={cn("pb-8", gradient)}>
+        <H1 className={cn("py-1", gradient)}>
           {"Playground of "}
           <a href="https://github.com/hajimism" target="_blank" rel="noopener">
             hajimism
@@ -33,7 +35,7 @@ export default function Home() {
         <ThemeSwitcher />
       </div>
       <Table className="caption-top">
-        <TableCaption className="text-left pb-8">
+        <TableCaption className="text-left py-8">
           Welcome to my playgrpound! Here is the pages.
         </TableCaption>
         <TableHeader>
@@ -52,7 +54,7 @@ export default function Home() {
               <TableCell>{item.description}</TableCell>
               <TableCell>
                 <a
-                  href={`https://github.com/hajimism/my-playground${item.path.toString()}`}
+                  href={`${PATH_TO_TREE_IN_REOO}${item.path.toString()}`}
                   target="_blank"
                   rel="noopener"
                 >

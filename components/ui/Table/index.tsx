@@ -12,7 +12,10 @@ const Table = forwardRef<HTMLTableElement, HTMLAttributes<HTMLTableElement>>(
     <div className="w-full overflow-auto">
       <table
         ref={ref}
-        className={cn("w-full caption-bottom text-sm border-b", className)}
+        className={cn(
+          "w-full caption-bottom text-sm border-b border-sage-5",
+          className
+        )}
         {...props}
       />
     </div>
@@ -46,7 +49,7 @@ const TableFooter = forwardRef<
 >(({ className, ...props }, ref) => (
   <tfoot
     ref={ref}
-    className={cn("bg-primary font-medium text-primary-foreground", className)}
+    className={cn("font-medium text-primary-foreground", className)}
     {...props}
   />
 ));
@@ -59,7 +62,7 @@ const TableRow = forwardRef<
   <tr
     ref={ref}
     className={cn(
-      "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
+      "border-b border-sage-5 transition-colors data-[state=selected]:bg-sage-3",
       className
     )}
     {...props}
@@ -74,7 +77,7 @@ const TableHead = forwardRef<
   <th
     ref={ref}
     className={cn(
-      "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
+      "h-12 px-4 text-left align-middle font-medium text-sage-11 [&:has([role=checkbox])]:pr-0",
       className
     )}
     {...props}
@@ -100,7 +103,7 @@ const TableCaption = forwardRef<
 >(({ className, ...props }, ref) => (
   <caption
     ref={ref}
-    className={cn("mt-4 text-sm text-muted-foreground", className)}
+    className={cn("mt-4 text-sm text-sage-12", className)}
     {...props}
   />
 ));
