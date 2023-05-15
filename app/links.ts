@@ -51,4 +51,9 @@ export const LINKS: LinksTableItem[] = [
       },
     ],
   },
+  {
+    path: "/zoomable-image",
+    description: "Implement zoom-able image w/ radix-dialog",
+    scraps: [],
+  },
 ];
