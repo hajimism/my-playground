@@ -10,7 +10,7 @@ import "@/style/tailwind.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
-  title: "Playground og hajimism",
+  title: "Playground of hajimism",
   description: "I am playing with Next v13.",
   openGraph: {
     images: [
