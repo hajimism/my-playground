@@ -12,6 +12,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata = {
   title: "Playground og hajimism",
   description: "I am playing with Next v13.",
+  openGraph: {
+    images: [
+      `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/dynamic-og-image`,
+    ],
+  },
 };
 
 export default function RootLayout({

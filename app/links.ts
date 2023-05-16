@@ -56,4 +56,9 @@ export const LINKS: LinksTableItem[] = [
     description: "Implement zoom-able image w/ radix-dialog",
     scraps: [],
   },
+  {
+    path: "/api/dynamic-og-image",
+    description: "Dynamic og image with ImageResponse. enter: ?text=your_text",
+    scraps: [],
+  },
 ];
