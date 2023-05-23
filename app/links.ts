@@ -61,4 +61,9 @@ export const LINKS: LinksTableItem[] = [
     description: "Dynamic og image with ImageResponse. enter: ?text=your_text",
     scraps: [],
   },
+  {
+    path: "/cmdk",
+    description: "Press command K to open command palette",
+    scraps: [],
+  },
 ];
