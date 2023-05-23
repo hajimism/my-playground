@@ -1,5 +1,3 @@
-import { CommandMenu } from "./component";
-
 export default function Page() {
   return (
     <div className="min-h-screen flex w-full mt-60 justify-center">
@@ -9,7 +7,6 @@ export default function Page() {
           <span className="text-xs">⌘</span>K
         </kbd>
       </p>
-      <CommandMenu />
     </div>
   );
 }
