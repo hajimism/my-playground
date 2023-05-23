@@ -1,8 +1,5 @@
-import Link from "next/link";
-import { ComponentProps } from "react";
-
 export type LinksTableItem = {
-  path: ComponentProps<typeof Link>["href"];
+  path: __next_route_internal_types__.RouteImpl<unknown>;
   description: string;
   scraps: Scrap[];
 };
