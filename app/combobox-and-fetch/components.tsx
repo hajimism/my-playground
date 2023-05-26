@@ -12,7 +12,7 @@ import { H1, P } from "@/components/ui/Typography";
 const endpoint =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000/combobox-and-fetch"
-    : `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/combobox-and-fetch`;
+    : `/combobox-and-fetch`;
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
