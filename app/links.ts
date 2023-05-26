@@ -63,4 +63,9 @@ export const LINKS: LinksTableItem[] = [
     description: "Press command K to open command palette",
     scraps: [],
   },
+  {
+    path: "/combobox-and-fetch",
+    description: "Select and fetch detail, creating new is also available",
+    scraps: [],
+  },
 ];
