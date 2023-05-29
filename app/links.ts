@@ -68,4 +68,14 @@ export const LINKS: LinksTableItem[] = [
     description: "Select and fetch detail, creating new is also available",
     scraps: [],
   },
+  {
+    path: "/avatar-group",
+    description: "AvatarGroup component inspired by Chakra UI AvatarGroup",
+    scraps: [
+      {
+        url: "https://zenn.dev/ikenohi/scraps/4497f0aaf15def",
+        title: "shadcn/uiでAvatarGroupを実装したい",
+      },
+    ],
+  },
 ];
