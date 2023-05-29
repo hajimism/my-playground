@@ -28,6 +28,8 @@ const PATH_TO_TREE_IN_REOO =
   "https://github.com/hajimism/my-playground/tree/main/app";
 
 export const PageTable = () => {
+  const tableItems = [...LINKS].reverse();
+
   return (
     <Table className="caption-top">
       <TableCaption className="text-left py-8">
@@ -43,7 +45,7 @@ export const PageTable = () => {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {LINKS.map((item) => (
+        {tableItems.map((item) => (
           <TableRow key={item.path.toString()}>
             <TableCell className={cn("font-bold", TEXT_GRADIENT)}>
               <Link href={item.path}>{item.path.toString()}</Link>
