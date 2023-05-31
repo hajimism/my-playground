@@ -3,15 +3,15 @@
 import { Link, Moon, Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
-import { FC, use, useCallback, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 
-import { getLinks } from "./lib";
 import { CommandView } from "./view";
+import { LINKS } from "../links";
 
 import type { CommandGroup, Command } from "./type";
 
 export const CommandPalette: FC = () => {
-  const { links } = use(getLinks());
+  const pageLinks = LINKS;
   const activateKey = "k";
 
   const router = useRouter();
@@ -35,7 +35,7 @@ export const CommandPalette: FC = () => {
     command();
   }, []);
 
-  const linkCommands: Command[] = links.map((link) => ({
+  const pageLinkCommands: Command[] = pageLinks.map((link) => ({
     label: link.path,
     icon: Link,
     action: () => runCommand(() => router.push(link.path)),
@@ -55,7 +55,7 @@ export const CommandPalette: FC = () => {
   ];
 
   const commandGroups: CommandGroup[] = [
-    { heading: "Link", commands: linkCommands },
+    { heading: "Link", commands: pageLinkCommands },
     { heading: "Theme", commands: themeCommands },
   ];
 
