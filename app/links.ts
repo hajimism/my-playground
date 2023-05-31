@@ -1,5 +1,7 @@
-export type LinksTableItem = {
-  path: __next_route_internal_types__.RouteImpl<unknown>;
+import { Route } from "next";
+
+export type LinkTableItem = {
+  path: Route;
   description: string;
   scraps: Scrap[];
 };
@@ -9,7 +11,7 @@ export type Scrap = {
   title: string;
 };
 
-export const LINKS: LinksTableItem[] = [
+export const LINKS: LinkTableItem[] = [
   {
     path: "/lexical-editor",
     description: "Tried Lexical Editor.",

@@ -1,9 +1,10 @@
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
 
 import { Header } from "@/components/ui/Header";
 import { Toaster } from "@/components/ui/Toast";
 
-import { CommandMenu } from "./cmdk/component";
+import { CommandPalette } from "./cmdk";
 import { Providers } from "./provider";
 
 import "@/style/tailwind.css";
@@ -34,7 +35,9 @@ export default function RootLayout({
             {children}
           </main>
           <Toaster />
-          <CommandMenu />
+          <Suspense fallback={<></>}>
+            <CommandPalette />
+          </Suspense>
         </Providers>
       </body>
     </html>
