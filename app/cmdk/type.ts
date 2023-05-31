@@ -1,24 +1,12 @@
 import { LucideIcon } from "lucide-react";
-import { Route } from "next";
 
 export type CommandGroup = {
   heading: string;
   commands: Command[];
 };
 
-type CommandBase = {
+export type Command = {
   label: string;
   icon: LucideIcon;
+  action: () => void;
 };
-
-export type LinkCommand = {
-  type: "LINK";
-  href: Route;
-} & CommandBase;
-
-export type ThemeCommand = {
-  type: "THEME";
-  theme: string;
-} & CommandBase;
-
-export type Command = LinkCommand | ThemeCommand;
