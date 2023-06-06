@@ -137,7 +137,7 @@ export const generateRandomJobMock = (i: number): Job => {
     tags: tags,
     created_at: createdAt,
     updated_at: createdAt,
-    client_name: "コープさっぽろ",
+    client_name: "素敵なクライアント",
     expires_at: new Date("2023/06/01"),
   };
 };
