@@ -6,5 +6,5 @@ import { JOB_LIST_MOCK } from "../data";
 
 export async function GET() {
   await sleep(3);
-  return NextResponse.json({ JOB_LIST_MOCK });
+  return NextResponse.json([...JOB_LIST_MOCK]);
 }
