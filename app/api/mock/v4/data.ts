@@ -46,13 +46,20 @@ export type SkillTag = {
   iconUrl?: string;
 };
 
+type ReactedUser = {
+  id: string;
+  iconUrl: string;
+};
+
 export type Job = {
   id: string;
   title: string;
   thumbnail: string;
   clientName: string;
+  projectName: string;
   jobCategory: JobCategory;
-  tags: SkillTag[];
+  skillTags: SkillTag[];
+  reactedUsers: ReactedUser[];
   createdAt: Date;
   updatedAt: Date;
   expiresAt: Date;
@@ -108,6 +115,24 @@ const TAGS: Tag = {
   ],
 };
 
+const generateSomeReactedUsers = () => {
+  const max = 5;
+  const randomNumber = Math.ceil(Math.random() * max) - 1;
+
+  const DUMMIE_USERS = [
+    { name: "Lady A", image: "/mock/avatar-group/lady_a.png" },
+    { name: "Lady B", image: "/mock/avatar-group/lady_b.png" },
+    { name: "Lady C", image: "/mock/avatar-group/lady_c.png" },
+    { name: "Lady D", image: "/mock/avatar-group/lady_d.png" },
+    { name: "Lady E", image: "/mock/avatar-group/lady_e.png" },
+  ];
+
+  return getRandomElements(DUMMIE_USERS, randomNumber).map(({ image }) => ({
+    id: generateUlid(),
+    iconUrl: image,
+  }));
+};
+
 const generateSomeTags = (category: JobCategory) => {
   // 職域に合わせた0~2個のタグを生成
   const max = 3;
@@ -138,9 +163,11 @@ export const generateRandomJobMock = (i: number): Job => {
     id: generateUlid(),
     title: "イケてる求人",
     clientName: "素敵なクライアント",
+    projectName: "最高のプロジェクト",
     thumbnail: "/mock/job_thumbnail.png",
     jobCategory: category,
-    tags: tags,
+    skillTags: tags,
+    reactedUsers: generateSomeReactedUsers(),
     createdAt: createdAt,
     updatedAt: createdAt,
     expiresAt: new Date("2023/06/01"),
