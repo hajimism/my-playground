@@ -54,7 +54,7 @@ type ReactedUser = {
 export type Job = {
   id: string;
   title: string;
-  thumbnail: string;
+  thumbnailUrl: string;
   clientName: string;
   projectName: string;
   jobCategory: JobCategory;
@@ -164,7 +164,7 @@ export const generateRandomJobMock = (i: number): Job => {
     title: "イケてる求人",
     clientName: "素敵なクライアント",
     projectName: "最高のプロジェクト",
-    thumbnail: "/mock/job_thumbnail.png",
+    thumbnailUrl: "/mock/job_thumbnail.png",
     jobCategory: category,
     skillTags: tags,
     reactedUsers: generateSomeReactedUsers(),
