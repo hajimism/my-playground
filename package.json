@@ -73,6 +73,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-storybook": "^0.6.11",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "lefthook": "^1.4.1",
     "postcss": "^8.4.21",
     "scaffdog": "^2.5.0",
     "storybook": "^7.0.18",
