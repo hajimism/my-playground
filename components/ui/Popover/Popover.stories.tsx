@@ -1,11 +1,11 @@
-import { StoryObj, Meta } from '@storybook/react'
+import { StoryObj, Meta } from "@storybook/react";
 
 import RootLayout from "@/app/layout";
 
-import { Popover } from '.'
+import { Popover } from ".";
 
 const meta: Meta<typeof Popover> = {
-  title: 'components/Popover',
+  title: "components/Popover",
   component: Popover,
   decorators: [
     (Story) => (
@@ -14,12 +14,12 @@ const meta: Meta<typeof Popover> = {
       </RootLayout>
     ),
   ],
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof Popover>
+type Story = StoryObj<typeof Popover>;
 
 export const Primary: Story = {
-  args:{}
-}
+  args: {},
+};

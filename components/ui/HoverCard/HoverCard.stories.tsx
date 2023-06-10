@@ -1,11 +1,11 @@
-import { StoryObj, Meta } from '@storybook/react'
+import { StoryObj, Meta } from "@storybook/react";
 
 import RootLayout from "@/app/layout";
 
-import { HoverCard } from '.'
+import { HoverCard } from ".";
 
 const meta: Meta<typeof HoverCard> = {
-  title: 'components/HoverCard',
+  title: "components/HoverCard",
   component: HoverCard,
   decorators: [
     (Story) => (
@@ -14,12 +14,12 @@ const meta: Meta<typeof HoverCard> = {
       </RootLayout>
     ),
   ],
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof HoverCard>
+type Story = StoryObj<typeof HoverCard>;
 
 export const Primary: Story = {
-  args:{}
-}
+  args: {},
+};

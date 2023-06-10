@@ -1,11 +1,11 @@
-import { StoryObj, Meta } from '@storybook/react'
+import { StoryObj, Meta } from "@storybook/react";
 
 import RootLayout from "@/app/layout";
 
-import { Avatar } from '.'
+import { Avatar } from ".";
 
 const meta: Meta<typeof Avatar> = {
-  title: 'components/Avatar',
+  title: "components/Avatar",
   component: Avatar,
   decorators: [
     (Story) => (
@@ -14,12 +14,12 @@ const meta: Meta<typeof Avatar> = {
       </RootLayout>
     ),
   ],
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof Avatar>
+type Story = StoryObj<typeof Avatar>;
 
 export const Primary: Story = {
-  args:{}
-}
+  args: {},
+};

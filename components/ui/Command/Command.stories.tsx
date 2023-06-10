@@ -1,11 +1,11 @@
-import { StoryObj, Meta } from '@storybook/react'
+import { StoryObj, Meta } from "@storybook/react";
 
 import RootLayout from "@/app/layout";
 
-import { Command } from '.'
+import { Command } from ".";
 
 const meta: Meta<typeof Command> = {
-  title: 'components/Command',
+  title: "components/Command",
   component: Command,
   decorators: [
     (Story) => (
@@ -14,12 +14,12 @@ const meta: Meta<typeof Command> = {
       </RootLayout>
     ),
   ],
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof Command>
+type Story = StoryObj<typeof Command>;
 
 export const Primary: Story = {
-  args:{}
-}
+  args: {},
+};

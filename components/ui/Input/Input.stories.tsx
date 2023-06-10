@@ -1,11 +1,11 @@
-import { StoryObj, Meta } from '@storybook/react'
+import { StoryObj, Meta } from "@storybook/react";
 
 import RootLayout from "@/app/layout";
 
-import { Input } from '.'
+import { Input } from ".";
 
 const meta: Meta<typeof Input> = {
-  title: 'components/Input',
+  title: "components/Input",
   component: Input,
   decorators: [
     (Story) => (
@@ -14,12 +14,12 @@ const meta: Meta<typeof Input> = {
       </RootLayout>
     ),
   ],
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof Input>
+type Story = StoryObj<typeof Input>;
 
 export const Primary: Story = {
-  args:{}
-}
+  args: {},
+};

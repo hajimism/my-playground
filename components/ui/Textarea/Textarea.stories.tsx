@@ -1,11 +1,11 @@
-import { StoryObj, Meta } from '@storybook/react'
+import { StoryObj, Meta } from "@storybook/react";
 
 import RootLayout from "@/app/layout";
 
-import { Textarea } from '.'
+import { Textarea } from ".";
 
 const meta: Meta<typeof Textarea> = {
-  title: 'components/Textarea',
+  title: "components/Textarea",
   component: Textarea,
   decorators: [
     (Story) => (
@@ -14,12 +14,12 @@ const meta: Meta<typeof Textarea> = {
       </RootLayout>
     ),
   ],
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof Textarea>
+type Story = StoryObj<typeof Textarea>;
 
 export const Primary: Story = {
-  args:{}
-}
+  args: {},
+};

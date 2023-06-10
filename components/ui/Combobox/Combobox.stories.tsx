@@ -1,11 +1,11 @@
-import { StoryObj, Meta } from '@storybook/react'
+import { StoryObj, Meta } from "@storybook/react";
 
 import RootLayout from "@/app/layout";
 
-import { Combobox } from '.'
+import { Combobox } from ".";
 
 const meta: Meta<typeof Combobox> = {
-  title: 'components/Combobox',
+  title: "components/Combobox",
   component: Combobox,
   decorators: [
     (Story) => (
@@ -14,12 +14,12 @@ const meta: Meta<typeof Combobox> = {
       </RootLayout>
     ),
   ],
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof Combobox>
+type Story = StoryObj<typeof Combobox>;
 
 export const Primary: Story = {
-  args:{}
-}
+  args: {},
+};
