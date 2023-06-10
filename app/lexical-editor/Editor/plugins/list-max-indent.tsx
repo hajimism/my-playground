@@ -45,7 +45,7 @@ function isIndentPermitted(maxDepth: number): boolean {
 
   let totalDepth = 0;
 
-  for (const elementNode of elementNodesInSelection) {
+  elementNodesInSelection.forEach((elementNode) => {
     if ($isListNode(elementNode)) {
       totalDepth = Math.max($getListDepth(elementNode) + 1, totalDepth);
     } else if ($isListItemNode(elementNode)) {
@@ -59,7 +59,7 @@ function isIndentPermitted(maxDepth: number): boolean {
 
       totalDepth = Math.max($getListDepth(parent) + 1, totalDepth);
     }
-  }
+  });
 
   return totalDepth <= maxDepth;
 }

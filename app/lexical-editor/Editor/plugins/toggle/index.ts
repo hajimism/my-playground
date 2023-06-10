@@ -61,9 +61,9 @@ export function TogglePlugin(): JSX.Element | null {
         const parent = node.getParent();
         if (!$isToggleContainerNode(parent)) {
           const children = node.getChildren();
-          for (const child of children) {
+          children.forEach((child) => {
             node.insertBefore(child);
-          }
+          });
           node.remove();
         }
       }),
@@ -80,9 +80,9 @@ export function TogglePlugin(): JSX.Element | null {
           !$isToggleTitleNode(children[0]) ||
           !$isToggleContentNode(children[1])
         ) {
-          for (const child of children) {
+          children.forEach((child) => {
             node.insertBefore(child);
-          }
+          });
           node.remove();
         }
       }),
