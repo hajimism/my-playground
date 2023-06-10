@@ -20,7 +20,7 @@ function TooltipDemo(props: { side: Side }) {
               <span className="sr-only">Add</span>
             </Button>
           </TooltipTrigger>
-          <TooltipContent side={props.side}>
+          <TooltipContent side={props.side ?? "top"}>
             <p>Add to library</p>
           </TooltipContent>
         </Tooltip>

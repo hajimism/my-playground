@@ -16,7 +16,7 @@ export const metadata = {
   description: "I am playing with Next v13.",
   openGraph: {
     images: [
-      `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/dynamic-og-image`,
+      `https://${process.env["NEXT_PUBLIC_VERCEL_URL"]}/api/dynamic-og-image`,
     ],
   },
 };

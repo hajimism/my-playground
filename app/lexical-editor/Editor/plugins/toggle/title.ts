@@ -35,15 +35,18 @@ export function convertSummaryElement(
 }
 
 export class ToggleTitleNode extends ElementNode {
-  static getType(): string {
+  static override getType(): string {
     return "toggle-title";
   }
 
-  static clone(node: ToggleTitleNode): ToggleTitleNode {
+  static override clone(node: ToggleTitleNode): ToggleTitleNode {
     return new ToggleTitleNode(node.__key);
   }
 
-  createDOM(_config: EditorConfig, _editor: LexicalEditor): HTMLElement {
+  override createDOM(
+    _config: EditorConfig,
+    _editor: LexicalEditor
+  ): HTMLElement {
     const dom = document.createElement("summary");
     const classNames = [
       "toggleMark",
@@ -60,7 +63,7 @@ export class ToggleTitleNode extends ElementNode {
     return dom;
   }
 
-  updateDOM(_prevNode: ToggleTitleNode, _dom: HTMLElement): boolean {
+  override updateDOM(_prevNode: ToggleTitleNode, _dom: HTMLElement): boolean {
     return false;
   }
 
@@ -75,18 +78,18 @@ export class ToggleTitleNode extends ElementNode {
     };
   }
 
-  static importJSON(
+  static override importJSON(
     _serializedNode: SerializedToggleTitleNode
   ): ToggleTitleNode {
     return $createToggleTitleNode();
   }
 
-  exportDOM(): DOMExportOutput {
+  override exportDOM(): DOMExportOutput {
     const element = document.createElement("summary");
     return { element };
   }
 
-  exportJSON(): SerializedToggleTitleNode {
+  override exportJSON(): SerializedToggleTitleNode {
     return {
       ...super.exportJSON(),
       type: "toggle-title",
@@ -94,12 +97,15 @@ export class ToggleTitleNode extends ElementNode {
     };
   }
 
-  collapseAtStart(_selection: RangeSelection): boolean {
+  override collapseAtStart(_selection: RangeSelection): boolean {
     this.getParentOrThrow().insertBefore(this);
     return true;
   }
 
-  insertNewAfter(_: RangeSelection, restoreSelection = true): ElementNode {
+  override insertNewAfter(
+    _: RangeSelection,
+    restoreSelection = true
+  ): ElementNode {
     const containerNode = this.getParentOrThrow();
 
     if (!$isToggleContainerNode(containerNode)) {

@@ -26,6 +26,6 @@ export const JOBS = [...Array(36)].map((_, i) => {
   return {
     id: i,
     ...JOB_TEMPLATES[(i % 5) % 3],
-    tag: OCCUPATIONS[i % 6],
+    tag: OCCUPATIONS[i % 6] ?? "Android",
   };
 });

@@ -40,7 +40,7 @@ export default function Page() {
       update(prev, {
         $splice: [
           [dragIndex, 1],
-          [hoverIndex, 0, prev[dragIndex]],
+          [hoverIndex, 0, prev[dragIndex] ?? "Android"],
         ],
       })
     );
@@ -98,7 +98,7 @@ interface ListItemProps {
   id: any;
   text: string;
   index: number;
-  onMove: (dragIndex: number, hoverIndex: number) => void;
+  onMove: (_dragIndex: number, _hoverIndex: number) => void;
 }
 
 const ListItem: FC<ListItemProps> = ({ id, text, index, onMove }) => {

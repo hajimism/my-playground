@@ -38,15 +38,18 @@ export class ToggleContainerNode extends ElementNode {
     this.__open = open;
   }
 
-  static getType(): string {
+  static override getType(): string {
     return "toggle-container";
   }
 
-  static clone(node: ToggleContainerNode): ToggleContainerNode {
+  static override clone(node: ToggleContainerNode): ToggleContainerNode {
     return new ToggleContainerNode(node.__open, node.__key);
   }
 
-  createDOM(_config: EditorConfig, editor: LexicalEditor): HTMLElement {
+  override createDOM(
+    _config: EditorConfig,
+    editor: LexicalEditor
+  ): HTMLElement {
     const dom = document.createElement("details");
     const classNames = [
       "container",
@@ -67,7 +70,10 @@ export class ToggleContainerNode extends ElementNode {
     return dom;
   }
 
-  updateDOM(prevNode: ToggleContainerNode, dom: HTMLDetailsElement): boolean {
+  override updateDOM(
+    prevNode: ToggleContainerNode,
+    dom: HTMLDetailsElement
+  ): boolean {
     if (prevNode.__open !== this.__open) {
       dom.open = this.__open;
     }
@@ -86,20 +92,20 @@ export class ToggleContainerNode extends ElementNode {
     };
   }
 
-  static importJSON(
+  static override importJSON(
     serializedNode: SerializedToggleContainerNode
   ): ToggleContainerNode {
     const node = $createToggleContainerNode(serializedNode.open);
     return node;
   }
 
-  exportDOM(): DOMExportOutput {
+  override exportDOM(): DOMExportOutput {
     const element = document.createElement("details");
     element.setAttribute("open", this.__open.toString());
     return { element };
   }
 
-  exportJSON(): SerializedToggleContainerNode {
+  override exportJSON(): SerializedToggleContainerNode {
     return {
       ...super.exportJSON(),
       open: this.__open,

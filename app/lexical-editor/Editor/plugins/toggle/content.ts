@@ -27,22 +27,22 @@ export function convertToggleContentElement(
 }
 
 export class ToggleContentNode extends ElementNode {
-  static getType(): string {
+  static override getType(): string {
     return "toggle-content";
   }
 
-  static clone(node: ToggleContentNode): ToggleContentNode {
+  static override clone(node: ToggleContentNode): ToggleContentNode {
     return new ToggleContentNode(node.__key);
   }
 
-  createDOM(_config: EditorConfig): HTMLElement {
+  override createDOM(_config: EditorConfig): HTMLElement {
     const dom = document.createElement("div");
     const classNames = ["pr-4", "pl-5"];
     dom.classList.add(...classNames);
     return dom;
   }
 
-  updateDOM(_prevNode: ToggleContentNode, _dom: HTMLElement): boolean {
+  override updateDOM(_prevNode: ToggleContentNode, _dom: HTMLElement): boolean {
     return false;
   }
 
@@ -60,23 +60,23 @@ export class ToggleContentNode extends ElementNode {
     };
   }
 
-  exportDOM(): DOMExportOutput {
+  override exportDOM(): DOMExportOutput {
     const element = document.createElement("div");
     element.setAttribute("data-lexical-collapsible-content", "true");
     return { element };
   }
 
-  static importJSON(
+  static override importJSON(
     _serializedNode: SerializedToggleContentNode
   ): ToggleContentNode {
     return $createToggleContentNode();
   }
 
-  isShadowRoot(): boolean {
+  override isShadowRoot(): boolean {
     return true;
   }
 
-  exportJSON(): SerializedToggleContentNode {
+  override exportJSON(): SerializedToggleContentNode {
     return {
       ...super.exportJSON(),
       type: "toggle-content",
