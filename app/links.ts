@@ -91,4 +91,14 @@ export const LINKS: LinkTableItem[] = [
       },
     ],
   },
+  {
+    path: "/tab-with-router",
+    description: "custom shadcn/ui/tabs in conjunction with query params",
+    scraps: [
+      {
+        url: "https://zenn.dev/ikenohi/scraps/8a85a7d0bcd443",
+        title: "queryParamsと連動するTabがほしい",
+      },
+    ],
+  },
 ];
