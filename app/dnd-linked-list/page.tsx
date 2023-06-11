@@ -4,7 +4,7 @@ import update from "immutability-helper";
 import { FC, useCallback, useMemo, useRef, useState } from "react";
 import { XYCoord, useDrag, useDrop } from "react-dnd";
 
-import { Card, CardTitle, CardContent, CardFooter } from "@/components/ui/Card";
+import { Card, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { H1, H2, P } from "@/components/ui/typography";
 
 import { cn } from "@/lib/utils";
