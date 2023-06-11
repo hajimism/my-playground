@@ -5,10 +5,10 @@ import { RichTextPlugin as RichTextPluginPrimitive } from "@lexical/react/Lexica
 export const RichTextPlugin = () => (
   <RichTextPluginPrimitive
     contentEditable={
-      <ContentEditable className="p-6 mt-4 min-h-[36rem] focus:ring-0 focus:outline-none" />
+      <ContentEditable className="mt-4 min-h-[36rem] p-6 focus:outline-none focus:ring-0" />
     }
     placeholder={
-      <div className="absolute pt-[2px] pl-1 top-10 left-7 text-sage-9 pointer-events-none select-none">
+      <div className="pointer-events-none absolute left-7 top-10 select-none pl-1 pt-[2px] text-sage-9">
         Enter some text...
       </div>
     }

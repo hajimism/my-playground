@@ -7,7 +7,7 @@ export default function Page() {
       alt="孟"
       width={400}
       height={400}
-      className="block mx-auto mt-40"
+      className="mx-auto mt-40 block"
     />
   );
 }

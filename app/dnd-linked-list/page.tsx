@@ -5,7 +5,7 @@ import { FC, useCallback, useMemo, useRef, useState } from "react";
 import { XYCoord, useDrag, useDrop } from "react-dnd";
 
 import { Card, CardTitle, CardContent, CardFooter } from "@/components/ui/Card";
-import { H1, H2, P } from "@/components/ui/Typography";
+import { H1, H2, P } from "@/components/ui/typography";
 
 import { cn } from "@/lib/utils";
 
@@ -70,12 +70,12 @@ export default function Page() {
           {list.map((item) => (
             <li key={item}>
               <H2 className="border-none">{item}</H2>
-              <ul className="flex overflow-x-auto w-[70rem] gap-12">
+              <ul className="flex w-[70rem] gap-12 overflow-x-auto">
                 {chunkedJobs[item].map((job, i) => (
                   <li key={i}>
                     <Card className="w-80">
                       <CardContent className="p-0">
-                        <div className="bg-blue-6 flex rounded-t-md justify-center items-center p-8">
+                        <div className="flex items-center justify-center rounded-t-md bg-blue-6 p-8">
                           <span className="text-6xl">{job.emoji}</span>
                         </div>
                       </CardContent>

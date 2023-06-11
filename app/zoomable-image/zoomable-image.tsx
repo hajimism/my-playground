@@ -44,7 +44,7 @@ export const ZoomableImage: FC<Props> = ({
           />
           <DialogPrimitive.Content className="fixed z-50 rounded-b-lg p-0 shadow-lg animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-3xl sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0">
             <Image src={src} alt="孟" width={800} height={800} />
-            <DialogPrimitive.Close className="absolute right-4 top-4 transition-opacity rounded-sm opacity-70 ring-offset-background hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-sage-1">
+            <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-sage-6 data-[state=open]:text-sage-1">
               <X className="h-4 w-4" />
               <span className="sr-only">Close</span>
             </DialogPrimitive.Close>

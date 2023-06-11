@@ -1,12 +1,12 @@
 import { StoryObj, Meta } from "@storybook/react";
 
-import { useToast, type Toast as ToastProps } from "@/hooks/ui/useToast";
+import { Button } from "@/components/ui/button";
 
-import { Button } from "@/components/ui/Button";
+import { useToast, type Toast } from "./hook";
 
 import { ToastAction } from ".";
 
-const ToastDemo = (props: ToastProps) => {
+const ToastDemo = (props: Toast) => {
   const { toast } = useToast();
 
   return (

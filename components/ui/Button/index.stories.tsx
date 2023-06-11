@@ -41,13 +41,6 @@ export const Outline: Story = {
   },
 };
 
-export const Subtle: Story = {
-  args: {
-    variant: "subtle",
-    children: "Subtle",
-  },
-};
-
 export const Ghost: Story = {
   args: {
     variant: "ghost",

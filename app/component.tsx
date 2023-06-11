@@ -1,12 +1,12 @@
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import {
   HoverCard,
   HoverCardTrigger,
   HoverCardContent,
-} from "@/components/ui/HoverCard";
+} from "@/components/ui/hover-card";
 import {
   Table,
   TableCaption,
@@ -15,13 +15,12 @@ import {
   TableHead,
   TableBody,
   TableCell,
-} from "@/components/ui/Table";
-import { List } from "@/components/ui/Typography";
-
-import { TEXT_GRADIENT } from "@/app/gradient";
+} from "@/components/ui/table";
+import { List } from "@/components/ui/typography";
 
 import { cn } from "@/lib/utils";
 
+import { TEXT_GRADIENT } from "./gradient";
 import { LINKS, Scrap } from "./links";
 
 const PATH_TO_TREE_IN_REOO =
@@ -32,7 +31,7 @@ export const PageTable = () => {
 
   return (
     <Table className="caption-top">
-      <TableCaption className="text-left py-8">
+      <TableCaption className="py-8 text-left">
         Welcome to my playgrpound! Here is the pages. I also welcome your
         comments on my scraps (Hover the Scrap count) !
       </TableCaption>
@@ -47,8 +46,10 @@ export const PageTable = () => {
       <TableBody>
         {tableItems.map((item) => (
           <TableRow key={item.path.toString()}>
-            <TableCell className={cn("font-bold", TEXT_GRADIENT)}>
-              <Link href={item.path}>{item.path.toString()}</Link>
+            <TableCell>
+              <Link href={item.path} className={cn("font-bold", TEXT_GRADIENT)}>
+                {item.path.toString()}
+              </Link>
             </TableCell>
             <TableCell>{item.description}</TableCell>
             <TableCell>
@@ -57,7 +58,7 @@ export const PageTable = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <ExternalLink className="ml-3 hover:text-teal-11 transition-colors" />
+                <ExternalLink className="ml-3 transition-colors hover:text-teal-11" />
               </a>
             </TableCell>
             <TableCell>
@@ -93,7 +94,7 @@ const ScrapColumnItem = ({ scraps }: { scraps: Scrap[] }) => {
                   href={url}
                   target="_blank"
                   rel="noopener"
-                  className="hover:text-teal-11 cursor-pointer transition-colors"
+                  className="cursor-pointer transition-colors hover:text-teal-11"
                 >
                   {title}
                 </a>

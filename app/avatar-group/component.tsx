@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/Avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 import { getInitial } from "./lib";
 
@@ -23,7 +23,7 @@ export const AvatarGroup: FC<Props> = ({ avatarDataList, max }) => {
   const reversetDataList = [...avatarDataListWithinMax].reverse();
 
   return (
-    <div className="flex space-x-reverse -space-x-2 flex-row-reverse justify-end">
+    <div className="flex flex-row-reverse justify-end -space-x-2 space-x-reverse">
       {excess > 0 && (
         <Avatar>
           <AvatarFallback> {`+${excess}`}</AvatarFallback>
@@ -31,7 +31,11 @@ export const AvatarGroup: FC<Props> = ({ avatarDataList, max }) => {
       )}
       {reversetDataList.map((user, i) => (
         <Avatar key={i}>
-          <AvatarImage src={user.image} alt={user.name} />
+          <AvatarImage
+            src={user.image}
+            alt={user.name}
+            className="object-contain"
+          />
           <AvatarFallback>{getInitial(user.name)}</AvatarFallback>
         </Avatar>
       ))}

@@ -10,7 +10,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/components/ui/Command";
+} from "@/components/ui/command";
 
 import type { CommandGroup as CommandGroupType } from "./type";
 

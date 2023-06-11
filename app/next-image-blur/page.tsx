@@ -1,4 +1,4 @@
-import { H1 } from "@/components/ui/Typography";
+import { H1 } from "@/components/ui/typography";
 
 import { Image } from "./image";
 

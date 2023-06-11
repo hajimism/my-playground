@@ -1,6 +1,6 @@
 import { StoryObj, Meta } from "@storybook/react";
 
-import { Checkbox } from "@/components/ui/Checkbox";
+import { Checkbox } from "@/components/ui/checkbox";
 
 import RootLayout from "@/app/layout";
 

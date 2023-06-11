@@ -1,18 +1,19 @@
 "use client";
 
 import * as TogglePrimitive from "@radix-ui/react-toggle";
-import { VariantProps, cva } from "class-variance-authority";
+import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef, ElementRef, ComponentPropsWithoutRef } from "react";
 
 import { cn } from "@/lib/utils";
 
 const toggleVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-sm text-sage-12 font-medium transition-colors bg-sage-1 data-[state=on]:bg-sage-3 focus:outline-none focus:ring-2 focus:ring-sage-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-sage-5",
+  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",
   {
     variants: {
       variant: {
         default: "bg-transparent",
-        outline: "bg-transparent border border-sage-2 hover:bg-sage-4",
+        outline:
+          "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
       },
       size: {
         default: "h-10 px-3",

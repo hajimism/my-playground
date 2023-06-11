@@ -3,19 +3,19 @@
 import { Check, ChevronsUpDown, Plus } from "lucide-react";
 import { FC } from "react";
 
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/components/ui/Command";
+} from "@/components/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/Popover";
+} from "@/components/ui/popover";
 
 import { cn } from "@/lib/utils";
 
@@ -66,7 +66,7 @@ export const Combobox: FC<Props> = ({
             <div className="p-1">
               <Button
                 variant="ghost"
-                className="w-full justify-start pl-2 font-normal h-8"
+                className="h-8 w-full justify-start pl-2 font-normal"
                 onClick={() => {
                   onValueChange("new");
                   onOpenChange(false);

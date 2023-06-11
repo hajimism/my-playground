@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import { Suspense } from "react";
 
-import { Header } from "@/components/ui/Header";
-import { Toaster } from "@/components/ui/Toast";
+import { Header } from "@/components/ui/header";
+import { Toaster } from "@/components/ui/toast/toaster";
 
 import { CommandPalette } from "./cmdk";
 import { Providers } from "./provider";
@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
-      <body className="font-inter bg-sage-1">
+      <body className="bg-sage-1 font-inter">
         <Providers>
           <Header />
           <main className="container mx-auto min-h-screen py-8">

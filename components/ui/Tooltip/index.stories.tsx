@@ -3,7 +3,7 @@ import { Plus } from "lucide-react";
 
 import RootLayout from "@/app/layout";
 
-import { Button } from "../Button";
+import { Button } from "../button";
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from ".";
 
@@ -11,7 +11,7 @@ type Side = "left" | "top" | "right" | "bottom" | undefined;
 
 function TooltipDemo(props: { side: Side }) {
   return (
-    <div className="flex justify-center h-screen items-center">
+    <div className="flex h-screen items-center justify-center">
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
