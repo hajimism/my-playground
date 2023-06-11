@@ -7,7 +7,7 @@ questions:
   name: "Please enter the name of the ui component (eg. footer)"
 ---
 
-# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.stories.tsx`
+# `{{ inputs.name }}/index.stories.tsx`
 
 ```tsx
 import { StoryObj, Meta } from '@storybook/react'
@@ -38,7 +38,7 @@ export const Primary: Story = {
 
 ```
 
-# `{{ inputs.name | pascal }}/index.tsx`
+# `{{ inputs.name }}/index.tsx`
 
 ```tsx
 
