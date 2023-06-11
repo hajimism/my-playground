@@ -80,4 +80,15 @@ export const LINKS: LinkTableItem[] = [
       },
     ],
   },
+  {
+    path: "/color-map",
+    description:
+      "custom shadcn/ui themes using @radix-ui/colors via windy-radix-palette",
+    scraps: [
+      {
+        url: "https://zenn.dev/ikenohi/scraps/fde4a74c6956c2",
+        title: "shadcn/uiのcolorを@radix-ui/colorsを使ってカスタマイズする",
+      },
+    ],
+  },
 ];

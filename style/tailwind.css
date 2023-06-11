@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: var(--sage1);
+    --foreground: var(--sage12);
+
+    --muted: var(--sage3);
+    --muted-foreground: var(--sage10);
+
+    --popover: var(--sage1);
+    --popover-foreground: var(--sage12);
+
+    --card: var(--sage1);
+    --card-foreground: var(--sage12);
+
+    --border: var(--sage4);
+    --input: var(--sage4);
+
+    --primary: var(--green11);
+    --accent-foreground: var(--sage12);
+
+    --secondary: var(--teal10);
+    --accent-foreground: var(--sage12);
+
+    --accent: var(--green5);
+    --accent-foreground: var(--sage12);
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: var(--sage8);
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
