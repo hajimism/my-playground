@@ -1,5 +1,3 @@
-"use client";
-
 import { Check, ChevronsUpDown, Plus } from "lucide-react";
 import { FC } from "react";
 
