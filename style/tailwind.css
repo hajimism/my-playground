@@ -20,10 +20,10 @@
     --input: var(--sage4);
 
     --primary: var(--green11);
-    --accent-foreground: var(--sage12);
+    --primary-foreground: var(--sage12);
 
     --secondary: var(--teal10);
-    --accent-foreground: var(--sage12);
+    --secondary-foreground: var(--sage3);
 
     --accent: var(--green5);
     --accent-foreground: var(--sage12);
