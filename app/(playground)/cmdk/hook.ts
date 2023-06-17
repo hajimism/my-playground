@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useState, useCallback, useEffect } from "react";
 
-import { LINKS } from "../links";
+import { LINKS } from "../../links";
 
 import type { Command, CommandGroup } from "./type";
 

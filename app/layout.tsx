@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { Header } from "@/components/ui/header";
 import { Toaster } from "@/components/ui/toast/toaster";
 
-import { CommandPalette } from "./cmdk";
+import { CommandPalette } from "./(playground)/cmdk";
 import { Providers } from "./provider";
 
 import "@/style/tailwind.css";
