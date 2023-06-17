@@ -23,20 +23,33 @@ import { Item } from "./type";
 type Props = {
   items: Item[];
   placeholder?: string;
+  onCreateNew?: (_item: Item) => void;
 };
 
 export const MultiSelect: FC<Props> = ({
   items,
   placeholder = "Select items...",
+  onCreateNew,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<Item[]>([]);
   const [inputValue, setInputValue] = useState("");
 
-  const createNew = () => {
+  const alreadyExist = items.map(({ label }) => label).includes(inputValue);
+  const selectables = items.filter((item) => !selected.includes(item));
+  const alreadySelected = selected
+    .map(({ label }) => label)
+    .includes(inputValue);
+
+  const createNew = (item: Item) => {
+    onCreateNew?.(item);
+    handleSelect(item);
+  };
+
+  const handleCreateItem = () => {
     const newItem = { value: inputValue, label: inputValue };
-    handleSelect(newItem);
+    if (!items.includes(newItem)) createNew(newItem);
   };
 
   const handleSelect = useCallback((item: Item) => {
@@ -71,8 +84,6 @@ export const MultiSelect: FC<Props> = ({
     e.preventDefault();
     e.stopPropagation();
   };
-
-  const selectables = items.filter((item) => !selected.includes(item));
 
   return (
     <Command
@@ -112,8 +123,9 @@ export const MultiSelect: FC<Props> = ({
           />
         </div>
       </div>
+
       <div className="relative mt-2">
-        {open && selectables.length > 0 && (
+        {open && (
           <div className="absolute top-0 w-full rounded-md border bg-popover text-popover-foreground shadow-md outline-none animate-in">
             <CommandGroup className="h-full overflow-auto">
               {selectables.map((item) => {
@@ -127,13 +139,21 @@ export const MultiSelect: FC<Props> = ({
                   </CommandItem>
                 );
               })}
-              {inputValue && (
+
+              {!alreadyExist && inputValue && (
                 <CommandItem
                   key="new"
-                  onSelect={createNew}
+                  onSelect={handleCreateItem}
                   onMouseDown={haltEvent}
                 >
                   Create {inputValue}!
+                </CommandItem>
+              )}
+
+              {/* TODO: not displayed as expected */}
+              {alreadyExist && alreadySelected && (
+                <CommandItem className="aria-selected:bg-background aria-selected:text-red-10">
+                  {inputValue} is already selected!
                 </CommandItem>
               )}
             </CommandGroup>
