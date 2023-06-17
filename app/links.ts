@@ -101,4 +101,14 @@ export const LINKS: LinkTableItem[] = [
       },
     ],
   },
+  {
+    path: "/notion-like-multi-select",
+    description: "custom shadcn/ui/tabs in conjunction with query params",
+    scraps: [
+      {
+        url: "https://zenn.dev/ikenohi/scraps/3cab556ecadff1",
+        title: "shadcn/uiでmulti selectなcomboboxが欲しい",
+      },
+    ],
+  },
 ];
