@@ -67,7 +67,7 @@
     "@storybook/addon-links": "^7.0.18",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/blocks": "^7.0.7",
-    "@storybook/nextjs": "^7.0.18",
+    "@storybook/nextjs": "^7.0.21",
     "@storybook/react": "^7.0.0-rc.5",
     "@storybook/testing-library": "^0.1.0",
     "@tsconfig/strictest": "^2.0.1",
