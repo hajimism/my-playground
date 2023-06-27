@@ -20,7 +20,7 @@
     "fix:prettier": "prettier --cache --write ."
   },
   "dependencies": {
-    "@lexical/react": "^0.10.0",
+    "@lexical/react": "^0.11.1",
     "@plaiceholder/next": "^2.5.0",
     "@radix-ui/react-avatar": "^1.0.3",
     "@radix-ui/react-checkbox": "^1.0.4",
