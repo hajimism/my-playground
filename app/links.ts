@@ -111,4 +111,14 @@ export const LINKS: LinkTableItem[] = [
       },
     ],
   },
+  {
+    path: "/use-online-status",
+    description: "catch online status with useSyncExternalStore",
+    scraps: [
+      {
+        url: "https://zenn.dev/ikenohi/scraps/0f66c272bb2fcb",
+        title: "useSyncExternalStoreのdocsを読む",
+      },
+    ],
+  },
 ];
