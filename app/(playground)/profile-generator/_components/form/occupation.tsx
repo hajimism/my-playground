@@ -36,7 +36,7 @@ export const OccupationPreview = () => {
   return (
     <div className="space-y-2">
       <Label className="text-lg font-bold text-gray-11">職種</Label>
-      <p className="rounded-xl border-[3px] p-4 text-lg font-semibold">
+      <p className="truncate rounded-xl border-[3px] p-4 text-lg font-semibold">
         {occupation}
       </p>
     </div>
