@@ -14,11 +14,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const initialSkill = [
-  { id: "a", label: "グラフィック", point: 3 },
-  { id: "b", label: "かわいさ", point: 7 },
-  { id: "c", label: "ファシリ", point: 3 },
-  { id: "d", label: "UIデザイン", point: 3 },
-  { id: "e", label: "SD", point: 3 },
+  { id: "a", label: "", point: 0 },
+  { id: "b", label: "", point: 0 },
+  { id: "c", label: "", point: 0 },
+  { id: "d", label: "", point: 0 },
+  { id: "e", label: "", point: 0 },
 ];
 
 const skillAtom = atom(initialSkill);

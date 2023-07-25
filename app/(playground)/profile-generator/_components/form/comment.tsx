@@ -6,9 +6,7 @@ import { ChangeEventHandler, useId } from "react";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-const commentAtom = atom(
-  "とても素晴らしいコメントとても素晴らしいコメントとても素晴らしいコメントとても素晴らしいコメントとても素晴らしいコメントとても素晴らしいコメントとても素晴らしいコメント"
-);
+const commentAtom = atom("");
 
 export const CommentInput = () => {
   const [comment, setcomment] = useAtom(commentAtom);

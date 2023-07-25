@@ -5,7 +5,7 @@ import { Form, Preview } from "./_components";
 export default function Page() {
   return (
     <div className="container">
-      <Tabs defaultValue="preview">
+      <Tabs defaultValue="form">
         <TabsList>
           <TabsTrigger value="form">Form</TabsTrigger>
           <TabsTrigger value="preview">Preview</TabsTrigger>

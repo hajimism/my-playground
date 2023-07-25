@@ -22,40 +22,7 @@ const tagsAtom = atom<Item[]>([
   },
 ]);
 
-const selectedTagsAtom = atom<Item[]>([
-  {
-    value: "chihou",
-    label: "地方在住",
-  },
-  {
-    value: "25grad",
-    label: "25卒",
-  },
-  {
-    value: "chihou",
-    label: "地方在住",
-  },
-  {
-    value: "25grad",
-    label: "25卒",
-  },
-  {
-    value: "chihou",
-    label: "地方在住",
-  },
-  {
-    value: "25grad",
-    label: "25卒",
-  },
-  {
-    value: "chihou",
-    label: "地方在住",
-  },
-  {
-    value: "25grad",
-    label: "25卒",
-  },
-]);
+const selectedTagsAtom = atom<Item[]>([]);
 
 export const TagInput = () => {
   const [tags, setTags] = useAtom(tagsAtom);
