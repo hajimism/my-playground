@@ -1,7 +1,7 @@
 "use client";
 
 import { atom, useAtom, useAtomValue } from "jotai";
-import { X } from "lucide-react";
+import { X, User } from "lucide-react";
 import Image from "next/image";
 import { forwardRef, useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
@@ -132,7 +132,7 @@ export const ImagePreview = () => {
   );
 
   return (
-    <div>
+    <div className="flex h-60 w-60 items-center justify-center rounded-xl bg-blue-2">
       {preview ? (
         <Image
           alt={image.name}
@@ -144,9 +144,9 @@ export const ImagePreview = () => {
           onError={() => URL.revokeObjectURL(preview)}
         />
       ) : (
-        <div className="flex h-60 w-60 items-center justify-center rounded-xl bg-blue-8">
-          No Image
-        </div>
+        <p className="text-blue-11">
+          <User className="h-32 w-32" />
+        </p>
       )}
     </div>
   );
