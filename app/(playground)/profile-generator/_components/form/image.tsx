@@ -1,7 +1,7 @@
 "use client";
 
 import { atom, useAtom, useAtomValue } from "jotai";
-import { X, User, ImageIcon } from "lucide-react";
+import { X, User, Image as ImageIcon } from "lucide-react";
 import Image from "next/image";
 import { forwardRef, useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
@@ -26,7 +26,6 @@ const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
     className,
     onReset,
     textOnError = "Ooops! Something went wrong.",
-    children,
     disabled,
     ...inputProps
   }) => {
