@@ -31,7 +31,10 @@ export const SkillInput = () => {
       <Label className="text-lg font-bold">スキル</Label>
       <p className="text-sm text-slate-500">
         Point: 最大値は5だけれど、5を超えた数字を設定することもできるよ! /
-        他人との比較じゃなくて、自分の中での相対評価を記述してね！
+        他人との比較じゃなくて、自分の中での相対評価を記述してね!
+      </p>
+      <p className="text-sm text-slate-500">
+        ラベルを重複なしですべて埋めるとPreviewが表示されるよ!
       </p>
       <ul className="space-y-2">
         <li className="grid grid-cols-2">
