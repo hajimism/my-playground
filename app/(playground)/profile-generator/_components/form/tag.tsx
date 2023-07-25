@@ -31,8 +31,9 @@ export const TagInput = () => {
     setTags((current) => [...current, newItem]);
 
   return (
-    <div>
-      <Label>タグ</Label>
+    <div className="space-y-2">
+      <Label className="text-lg font-bold">タグ</Label>
+      <p className="text-sm text-slate-500">自分でタグを作ってね！</p>
       <MultiSelect
         items={tags}
         onCreateNew={onCreateNew}

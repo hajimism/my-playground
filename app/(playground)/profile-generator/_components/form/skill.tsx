@@ -27,9 +27,17 @@ export const SkillInput = () => {
   const [skills, setSkill] = useAtom(skillAtom);
 
   return (
-    <div>
-      <Label>スキル</Label>
-      <ul>
+    <div className="space-y-4">
+      <Label className="text-lg font-bold">スキル</Label>
+      <p className="text-sm text-slate-500">
+        Point: 最大値は5だけれど、5を超えた数字を設定することもできるよ! /
+        他人との比較じゃなくて、自分の中での相対評価を記述してね！
+      </p>
+      <ul className="space-y-2">
+        <li className="grid grid-cols-2">
+          <Label className="font-bold">ラベル</Label>
+          <Label className="font-bold">ポイント</Label>
+        </li>
         {skills.map((skill) => {
           const onChangeLabel: ChangeEventHandler<HTMLInputElement> = (e) => {
             setSkill(
@@ -60,7 +68,12 @@ export const SkillInput = () => {
 
           return (
             <li key={skill.id} className="flex">
-              <Input value={label} type="text" onChange={onChangeLabel} />
+              <Input
+                placeholder="スキル名"
+                value={label}
+                type="text"
+                onChange={onChangeLabel}
+              />
               <Input value={point} type="number" onChange={onChangePoint} />
             </li>
           );

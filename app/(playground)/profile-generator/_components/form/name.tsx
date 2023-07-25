@@ -16,8 +16,10 @@ export const NameInput = () => {
     setName(e.target.value);
 
   return (
-    <div>
-      <Label htmlFor={id}>名前</Label>
+    <div className="space-y-2">
+      <Label className="text-lg font-bold" htmlFor={id}>
+        名前
+      </Label>
       <Input id={id} value={name} onChange={onChange} />
     </div>
   );

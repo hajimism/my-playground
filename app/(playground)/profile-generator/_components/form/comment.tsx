@@ -16,9 +16,16 @@ export const CommentInput = () => {
     setcomment(e.target.value);
 
   return (
-    <div>
-      <Label htmlFor={id}>コメント</Label>
-      <Textarea id={id} value={comment} onChange={onChange} />
+    <div className="space-y-2">
+      <Label className="text-lg font-bold" htmlFor={id}>
+        コメント
+      </Label>
+      <Textarea
+        placeholder="大体70文字くらい！"
+        id={id}
+        value={comment}
+        onChange={onChange}
+      />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 "use client";
 
 import { atom, useAtom, useAtomValue } from "jotai";
-import { X, User } from "lucide-react";
+import { X, User, ImageIcon } from "lucide-react";
 import Image from "next/image";
 import { forwardRef, useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
@@ -67,7 +67,7 @@ const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
         <div
           {...getRootProps({ className: "dropzone" })}
           className={cn(
-            "group aspect-video w-80 rounded bg-muted-foreground hover:cursor-pointer",
+            "group aspect-video h-60 w-60 rounded bg-muted-foreground hover:cursor-pointer",
             "flex items-center justify-center",
             disabled && "hover:cursor-not-allowed",
             className
@@ -103,7 +103,7 @@ const ImageUploader: FC<Props> = forwardRef<HTMLInputElement, Props>(
               />
             </div>
           ) : (
-            <>{children}</>
+            <ImageIcon className="text-white" />
           )}
         </div>
         <p className="text-destructive">{errorText}</p>

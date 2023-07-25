@@ -16,9 +16,16 @@ export const OccupationInput = () => {
     setOccupation(e.target.value);
 
   return (
-    <div>
-      <Label htmlFor={id}>職業</Label>
-      <Input id={id} value={occupation} onChange={onChange} />
+    <div className="space-y-2">
+      <Label className="text-lg font-bold" htmlFor={id}>
+        職種
+      </Label>
+      <Input
+        placeholder="おもしろデザイナー"
+        id={id}
+        value={occupation}
+        onChange={onChange}
+      />
     </div>
   );
 };
@@ -28,7 +35,7 @@ export const OccupationPreview = () => {
 
   return (
     <div className="space-y-2">
-      <Label className="text-lg font-bold text-gray-11">職業</Label>
+      <Label className="text-lg font-bold text-gray-11">職種</Label>
       <p className="rounded-xl border-[3px] p-4 text-lg font-semibold">
         {occupation}
       </p>
