@@ -77,7 +77,12 @@ export const SkillInput = () => {
                 type="text"
                 onChange={onChangeLabel}
               />
-              <Input value={point} type="number" onChange={onChangePoint} />
+              <Input
+                value={point}
+                min={0}
+                type="number"
+                onChange={onChangePoint}
+              />
             </li>
           );
         })}
