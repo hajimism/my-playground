@@ -13,6 +13,8 @@ import {
   KeyboardEvent,
   FC,
   MouseEventHandler,
+  Dispatch,
+  SetStateAction,
 } from "react";
 
 import { Badge } from "@/components/ui/badge";
@@ -22,6 +24,8 @@ import { Item } from "./type";
 
 type Props = {
   items: Item[];
+  selected: Item[];
+  setSelected: Dispatch<SetStateAction<Item[]>>;
   placeholder?: string;
   onCreateNew?: (_item: Item) => void;
 };
@@ -30,10 +34,12 @@ export const MultiSelect: FC<Props> = ({
   items,
   placeholder = "Select items...",
   onCreateNew,
+  selected,
+  setSelected,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState<Item[]>([]);
+
   const [inputValue, setInputValue] = useState("");
 
   const alreadyExist = items.map(({ label }) => label).includes(inputValue);
@@ -52,14 +58,20 @@ export const MultiSelect: FC<Props> = ({
     if (!items.includes(newItem)) createNew(newItem);
   };
 
-  const handleSelect = useCallback((item: Item) => {
-    setInputValue("");
-    setSelected((prev) => [...prev, item]);
-  }, []);
+  const handleSelect = useCallback(
+    (item: Item) => {
+      setInputValue("");
+      setSelected((prev) => [...prev, item]);
+    },
+    [setSelected]
+  );
 
-  const handleUnselect = useCallback((item: Item) => {
-    setSelected((prev) => prev.filter((s) => s.value !== item.value));
-  }, []);
+  const handleUnselect = useCallback(
+    (item: Item) => {
+      setSelected((prev) => prev.filter((s) => s.value !== item.value));
+    },
+    [setSelected]
+  );
 
   const handleKeyDown = useCallback((e: KeyboardEvent<HTMLDivElement>) => {
     const input = inputRef.current;

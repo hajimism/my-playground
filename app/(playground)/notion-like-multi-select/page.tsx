@@ -1,6 +1,7 @@
 "use client";
 
 import { useAtom } from "jotai";
+import { useState } from "react";
 
 import { H1 } from "@/components/ui/typography";
 
@@ -15,6 +16,7 @@ export default function Page() {
   const [flameworks, setFlameWorks] = useAtom(flameworksAtom);
   const onCreateNew = (newItem: Item) =>
     setFlameWorks((current) => [...current, newItem]);
+  const [selected, setSelected] = useState<Item[]>([]);
 
   return (
     <div className="flex flex-col gap-40">
@@ -25,7 +27,12 @@ export default function Page() {
 
       <div className="flex flex-col gap-6">
         <H1>With Jotai</H1>
-        <MultiSelect items={flameworks} onCreateNew={onCreateNew} />
+        <MultiSelect
+          selected={selected}
+          setSelected={setSelected}
+          items={flameworks}
+          onCreateNew={onCreateNew}
+        />
       </div>
     </div>
   );
