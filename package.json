@@ -34,7 +34,7 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.5",
     "@swc-jotai/react-refresh": "^0.0.8",
-    "@types/node": "18.15.11",
+    "@types/node": "20.4.5",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.1",
     "class-variance-authority": "^0.6.0",
