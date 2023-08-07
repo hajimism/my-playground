@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { LINKS } from "../links";
 
 const PATH_TO_TREE_IN_REOO =
-  "https://github.com/hajimism/my-playground/tree/main/app";
+  "https://github.com/hajimism/my-playground/tree/main/app/(playground)";
 
 export const ToSource = () => {
   const pathname = usePathname();
