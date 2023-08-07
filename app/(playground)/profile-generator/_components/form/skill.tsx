@@ -99,7 +99,7 @@ export const SkillPreview = () => {
       <div className="border-[3px] p-4 pt-10">
         <RadarChart width={464} height={400} data={skill}>
           <PolarGrid />
-          <PolarAngleAxis fontSize="20px" dataKey="label" />
+          <PolarAngleAxis fontSize="16px" dataKey="label" />
           <PolarRadiusAxis
             domain={[0, 5]}
             tick={false}
