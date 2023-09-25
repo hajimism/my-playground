@@ -83,7 +83,7 @@
     "lefthook": "^1.4.1",
     "postcss": "^8.4.21",
     "scaffdog": "^2.5.0",
-    "storybook": "^7.0.21",
+    "storybook": "^7.4.5",
     "tailwindcss": "^3.3.2",
     "windy-radix-palette": "^0.6.1"
   }
