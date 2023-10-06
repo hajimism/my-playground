@@ -121,4 +121,14 @@ export const LINKS: LinkTableItem[] = [
       },
     ],
   },
+  {
+    path: "/scroll-to-end-then-enable",
+    description: "Please read terms of service to the end.",
+    scraps: [
+      {
+        url: "https://zenn.dev/ikenohi/scraps/dd2979abc06be6",
+        title: "利用規約を全部読んだら押せるチェックボックスを作りたい",
+      },
+    ],
+  },
 ];
