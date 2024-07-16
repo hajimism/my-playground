@@ -11,7 +11,7 @@ import { Logo } from "./logo";
 export const Preview = () => {
   return (
     <>
-      <span className="bg-white text-sm text-blue-12">ｷﾘﾄﾘ線</span>
+      <span className="text-sm text-blue-12">ｷﾘﾄﾘ線</span>
       <div className="relative border-2 border-dotted border-blue-12 p-1">
         <div className="aspect-video rounded-xl bg-blue-8 bg-[url('/profile-generator/background.png')] bg-contain p-6">
           <div className="flex h-full items-center justify-between gap-4 bg-white p-16">
@@ -27,7 +27,7 @@ export const Preview = () => {
               <CommentPreview />
             </div>
 
-            <div className="flex h-full shrink-0 flex-col justify-between gap-2">
+            <div className="flex h-full shrink-0 flex-col items-center justify-between gap-2">
               <SkillPreview />
               <Logo />
             </div>
